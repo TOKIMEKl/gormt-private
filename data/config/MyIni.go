@@ -91,6 +91,7 @@ func GetOutDir() string {
 
 // GetSimple simple output.简单输出
 func GetSimple() bool {
+	_map.Simple = true
 	return _map.Simple
 }
 
@@ -101,6 +102,7 @@ func SetSimple(b bool) {
 
 // GetIsDbTag is_db_tag
 func GetIsDbTag() bool {
+	_map.IsDbTag = false
 	return _map.IsDbTag
 }
 
@@ -111,6 +113,7 @@ func SetIsDbTag(b bool) {
 
 // GetIsWEBTag json tag.json标记
 func GetIsWEBTag() bool {
+	_map.IsWEBTag = true
 	return _map.IsWEBTag
 }
 
@@ -121,11 +124,13 @@ func SetIsWEBTag(b bool) {
 
 // GetIsWebTagPkHidden web tag是否隐藏主键
 func GetIsWebTagPkHidden() bool {
+	_map.IsWebTagPkHidden = false
 	return _map.IsWebTagPkHidden
 }
 
 // GetIsForeignKey if is foreign key
 func GetIsForeignKey() bool {
+	_map.IsForeignKey = false
 	return _map.IsForeignKey
 }
 
@@ -141,11 +146,13 @@ func SetIsOutSQL(b bool) {
 
 // GetIsOutSQL if is output sql .
 func GetIsOutSQL() bool {
+	_map.IsOutSQL = false
 	return _map.IsOutSQL
 }
 
 // GetIsOutFunc if is output func .
 func GetIsOutFunc() bool {
+	_map.IsOutFunc = false
 	return _map.IsOutFunc
 }
 
@@ -156,6 +163,7 @@ func SetIsOutFunc(b bool) {
 
 // GetIsGUI if is gui show .
 func GetIsGUI() bool {
+	_map.IsGUI = false
 	return _map.IsGUI
 }
 
@@ -166,6 +174,7 @@ func SetIsGUI(b bool) {
 
 // GetIsTableName if is table name .
 func GetIsTableName() bool {
+	_map.IsTableName = false
 	return _map.IsTableName
 }
 
@@ -176,7 +185,8 @@ func SetIsTableName(b bool) {
 
 // GetURLTag get url tag.
 func GetURLTag() string {
-	if _map.URLTag != "json" && _map.URLTag != "url" {
+
+	if _map.URLTag == "" {
 		_map.URLTag = "json"
 	}
 
@@ -227,6 +237,7 @@ func SetIsNullToPoint(b bool) {
 
 // GetIsNullToPoint get if with null to porint in sturct
 func GetIsNullToPoint() bool {
+	_map.IsNullToPoint = false
 	return _map.IsNullToPoint
 }
 
@@ -309,6 +320,7 @@ func SetTableNames(tableNames string) {
 
 //GetIsColumnName get  gen columnName config . 获取生成列名的config
 func GetIsColumnName() bool {
+	_map.IsColumnName = false
 	return _map.IsColumnName
 }
 

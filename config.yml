@@ -19,17 +19,19 @@ table_prefix : "" # 表前缀, 如果有则使用, 没有留空
 table_names: "" # 指定表生成，多个表用,隔开
 
 db_info:
-    host : 127.0.0.1 # type=1的时候，host为yml文件全路径
+    host : 172.30.10.15 # type=1的时候，host为yml文件全路径
     port : 3306
-    username : root
+    username : aitrack
     password : 123456
-    database : matrix
+    database : aitrack
     type: 0 # 数据库类型:0:mysql , 1:sqlite , 2:mssql
 self_type_define: # 自定义数据类型映射
     datetime: time.Time
     time: time.Time
+    date: string
+    extra: string
 out_file_name: "" # 自定义生成文件名
-web_tag_type: 0 # json tag类型 0: 小驼峰 1: 下划线
+web_tag_type: 1 # json tag类型 0: 小驼峰 1: 下划线
 
 # sqlite
 # db_info:
